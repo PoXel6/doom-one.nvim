@@ -38,6 +38,7 @@ local config = {
 		indent_blankline = if_nil(vim.g.doom_one_plugin_indent_blankline, true),
 		vim_illuminate = if_nil(vim.g.doom_one_plugin_vim_illuminate, true),
 		lspsaga = if_nil(vim.g.doom_one_plugin_lspsaga, false),
+		blink = if_nil(vim.g.doom_one_plugin_blink, false),
 	},
 }
 
@@ -635,6 +636,56 @@ doom_one.set_colorscheme = function()
 		set_hl("LspSagaDefPreviewBorder", { link = "Bold" })
 		set_hl("LspLinesDiagBorder", { link = "Bold" })
 	end
+
+  if config.plugins.blink then
+    set_hl("BlinkCmpMenu", { bg = config.ui.transparent_background and "NONE" or palette.bg, fg = palette.fg })
+    set_hl("BlinkCmpKind", { fg = palette.base5 })
+    set_hl("BlinkCmpMenuBorder", { fg = dark_theme and palette.blue or palette.red })
+    set_hl("BlinkCmpMenuSelection", { fg = palette.bg, bg = palette.blue, })
+    set_hl("BlinkCmpScrollBarThumb", { bg = config.ui.transparent_background and "NONE" })
+    set_hl("BlinkCmpScrollBarGutter", { bg = config.ui.transparent_background and "NONE" })
+    set_hl("BlinkCmpDocBorder", { fg = palette.blue, bg = palette.bg })
+    set_hl("BlinkCmpDocSeparator", { fg = palette.magenta, bg = palette.bg })
+
+    local kinds = { -- shoutout nvchad for this snippet of code.
+      Constant = palette.orange,
+      Function = palette.magenta,
+      Identifier = palette.red,
+      Field = palette.red,
+      Variable = palette.blue,
+      Snippet = colors.red,
+      Text = palette.green,
+      Structure = palette.blue,
+      Type = palette.yellow,
+      Keyword = palette.base8,
+      Method = palette.magenta,
+      Constructor = colors.blue,
+      Folder = palette.base8,
+      Module = palette.yellow,
+      Property = palette.red,
+      Enum = colors.blue,
+      Unit = palette.blue,
+      Class = colors.teal,
+      File = palette.base8,
+      Interface = colors.green,
+      Color = colors.white,
+      Reference = palette.base7,
+      EnumMember = colors.purple,
+      Struct = palette.blue,
+      Value = colors.cyan,
+      Event = colors.yellow,
+      Operator = palette.base7,
+      TypeParameter = palette.red,
+      Copilot = colors.green,
+      Codeium = colors.vibrant_green,
+      TabNine = colors.baby_pink,
+      SuperMaven = colors.yellow,
+    }
+
+    for kind, color in pairs(kinds) do
+      set_hl("BlinkCmpKind" .. kind, { fg = color, bg = config.ui.transparent_background and "NONE" or palette.bg })
+    end
+  end
 end
 
 return doom_one
