@@ -15,6 +15,10 @@ This colorscheme is ported from [doom-emacs' doom-one].
 
 > **IMPORTANT**: This colorscheme requires Neovim >= 0.6.x to work!
 
+Difference with upstream:
+1. current line in relative line number has color `vim.g.doom_one_relative_line_color = true`
+2. support (currently partial) for BlinkCmp plugin
+
 
 ## Notices
 - `2022-08-08`: doom-one is now using Neovim global variables for configurations again.
