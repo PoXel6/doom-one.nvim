@@ -75,6 +75,7 @@ return {
 		vim.g.doom_one_plugin_indent_blankline = true
 		vim.g.doom_one_plugin_vim_illuminate = true
 		vim.g.doom_one_plugin_lspsaga = false
+		vim.g.doom_one_plugin_blink = false
     end
 }
 ```
@@ -96,6 +97,7 @@ use({
         vim.g.doom_one_diagnostics_text_color = false
 		-- Enable transparent background
 		vim.g.doom_one_transparent_background = false
+        vim.g.doom_one_relative_line_color = true
 
         -- Pumblend transparency
 		vim.g.doom_one_pumblend_enable = false
@@ -113,6 +115,7 @@ use({
 		vim.g.doom_one_plugin_indent_blankline = true
 		vim.g.doom_one_plugin_vim_illuminate = true
 		vim.g.doom_one_plugin_lspsaga = false
+		vim.g.doom_one_plugin_blink = false
 	end,
 	config = function()
         vim.cmd("colorscheme doom-one")
