@@ -697,7 +697,7 @@ doom_one.set_colorscheme = function()
     set_hl("MiniPickPrompt", { link = "MiniPickBorder" })
     set_hl("MiniPickPreviewLine", { link = "MiniPickBorder" })
     set_hl("MiniPickPreviewRegion", { link = "MiniPickBorder" })
-    set_hl("MiniPickMatchCurrent", { fg = palette.violet, bold = true })
+    set_hl("MiniPickMatchCurrent", { fg = palette.violet, bold = true, bg = palette.blue })
     set_hl("MiniPickPromptCaret", { link = "VisualBold" })
     set_hl("MiniPickPromptCaret", { fg = dark_theme and palette.blue or palette.red })
   end
