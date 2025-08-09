@@ -39,6 +39,7 @@ local config = {
 		vim_illuminate = if_nil(vim.g.doom_one_plugin_vim_illuminate, true),
 		lspsaga = if_nil(vim.g.doom_one_plugin_lspsaga, false),
 		blink = if_nil(vim.g.doom_one_plugin_blink, true),
+		mini_pick = if_nil(vim.g.doom_one_plugin_mini_pick, true),
 	},
 }
 
@@ -689,6 +690,18 @@ doom_one.set_colorscheme = function()
       set_hl("BlinkCmpKind" .. kind, { fg = color, bg = config.ui.transparent_background and "NONE" or palette.bg })
     end
   end
+
+  if config.plugins.mini_pick then
+    set_hl("MiniPickNormal", { fg = palette.fg })
+    set_hl("MiniPickBorder", { fg = dark_theme and palette.blue or palette.red })
+    set_hl("MiniPickPrompt", { link = "MiniPickBorder" })
+    set_hl("MiniPickPreviewLine", { link = "MiniPickBorder" })
+    set_hl("MiniPickPreviewRegion", { link = "MiniPickBorder" })
+    set_hl("MiniPickMatchCurrent", { fg = palette.violet, bold = true })
+    set_hl("MiniPickPromptCaret", { link = "VisualBold" })
+    set_hl("MiniPickPromptCaret", { fg = dark_theme and palette.blue or palette.red })
+  end
+
 end
 
 return doom_one

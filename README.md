@@ -76,7 +76,8 @@ return {
 		vim.g.doom_one_plugin_vim_illuminate = true
 		vim.g.doom_one_plugin_lspsaga = false
 		vim.g.doom_one_plugin_blink = true
-    end
+		vim.g.doom_one_plugin_mini_pick = true
+h   end
 }
 ```
 
@@ -117,6 +118,7 @@ use({
 		vim.g.doom_one_plugin_vim_illuminate = true
 		vim.g.doom_one_plugin_lspsaga = false
 		vim.g.doom_one_plugin_blink = true
+		vim.g.doom_one_plugin_mini_pick = true
 	end,
 	config = function()
         vim.cmd("colorscheme doom-one")
