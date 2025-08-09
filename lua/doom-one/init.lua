@@ -14,13 +14,13 @@ local colors = require("doom-one.colors")
 
 local config = {
 	ui = {
-		cursor_coloring = if_nil(vim.g.doom_one_cursor_coloring, false),
+		cursor_coloring = if_nil(vim.g.doom_one_cursor_coloring, true),
 		terminal_colors = if_nil(vim.g.doom_one_terminal_colors, true),
-		italic_comments = if_nil(vim.g.doom_one_italic_comments, false),
+		italic_comments = if_nil(vim.g.doom_one_italic_comments, true),
 		enable_treesitter = if_nil(vim.g.doom_one_enable_treesitter, true),
-		diagnostics_text_color = if_nil(vim.g.doom_one_diagnostics_text_color, false),
-		transparent_background = if_nil(vim.g.doom_one_transparent_background, false),
-    relative_line_color = if_nil(vim.g.doom_one_relative_line_color, false),
+		diagnostics_text_color = if_nil(vim.g.doom_one_diagnostics_text_color, true),
+		transparent_background = if_nil(vim.g.doom_one_transparent_background, true),
+    relative_line_color = if_nil(vim.g.doom_one_relative_line_color, true),
 		pumblend = {
 			enable = if_nil(vim.g.doom_one_pumblend_enable, false),
 			transparency_amount = if_nil(vim.g.doom_one_pumblend_transparency, 20),
@@ -38,7 +38,7 @@ local config = {
 		indent_blankline = if_nil(vim.g.doom_one_plugin_indent_blankline, true),
 		vim_illuminate = if_nil(vim.g.doom_one_plugin_vim_illuminate, true),
 		lspsaga = if_nil(vim.g.doom_one_plugin_lspsaga, false),
-		blink = if_nil(vim.g.doom_one_plugin_blink, false),
+		blink = if_nil(vim.g.doom_one_plugin_blink, true),
 	},
 }
 
