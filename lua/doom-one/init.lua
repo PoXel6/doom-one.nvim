@@ -110,9 +110,9 @@ doom_one.set_colorscheme = function()
 	set_hl("TabLineSel", { bg = config.ui.transparent_background and "NONE" or palette.bg, fg = palette.blue, bold = true })
 	set_hl("TabLineFill", { bg = palette.base1, bold = true })
 
-	set_hl("StatusLine", { bg = dark_theme and palette.base3 or palette.base2, fg = palette.base8 })
-	set_hl("StatusLineNC", { bg = palette.bg_alt, fg = palette.base6 })
-	set_hl("StatusLinePart", { bg = palette.bg_alt, fg = palette.base6, bold = true })
+	set_hl("StatusLine", { bg = config.ui.transparent_background and "NONE" or dark_theme and palette.base3 or palette.base2, fg = palette.base8 })
+	set_hl("StatusLineNC", { bg = config.ui.transparent_background and "NONE" or palette.bg_alt, fg = palette.base6 })
+	set_hl("StatusLinePart", { bg = config.ui.transparent_background and "NONE" or palette.bg_alt, fg = palette.base6, bold = true })
 	set_hl("StatusLinePartNC", { link = "StatusLinePart" })
 
 	set_hl("Pmenu", { bg = palette.bg_alt, fg = palette.fg })
