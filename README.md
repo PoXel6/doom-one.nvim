@@ -66,7 +66,7 @@ return {
         -- Plugins integration
 		vim.g.doom_one_plugin_neorg = true
 		vim.g.doom_one_plugin_barbar = false
-		vim.g.doom_one_plugin_telescope = false
+		vim.g.doom_one_plugin_telescope = true
 		vim.g.doom_one_plugin_neogit = true
 		vim.g.doom_one_plugin_nvim_tree = true
 		vim.g.doom_one_plugin_dashboard = true
@@ -108,7 +108,7 @@ use({
         -- Plugins integration
 		vim.g.doom_one_plugin_neorg = true
 		vim.g.doom_one_plugin_barbar = false
-		vim.g.doom_one_plugin_telescope = false
+		vim.g.doom_one_plugin_telescope = true
 		vim.g.doom_one_plugin_neogit = true
 		vim.g.doom_one_plugin_nvim_tree = true
 		vim.g.doom_one_plugin_dashboard = true
