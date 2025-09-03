@@ -106,9 +106,9 @@ doom_one.set_colorscheme = function()
 	set_hl("Separator", { fg = palette.fg_alt })
 	set_hl("VertSplit", { bg = config.ui.transparent_background and "NONE" or palette.bg, fg = palette.grey })
 
-	set_hl("TabLine", { bg = palette.bg_alt, fg = palette.base7, bold = true })
+	set_hl("TabLine", { bg = config.ui.transparent_background and "NONE" or  palette.bg_alt, fg = palette.base7, bold = true })
 	set_hl("TabLineSel", { bg = config.ui.transparent_background and "NONE" or palette.bg, fg = palette.blue, bold = true })
-	set_hl("TabLineFill", { bg = palette.base1, bold = true })
+	set_hl("TabLineFill", { bg = config.ui.transparent_background and "NONE" or palette.base1, bold = true })
 
 	set_hl("StatusLine", { bg = config.ui.transparent_background and "NONE" or dark_theme and palette.base3 or palette.base2, fg = palette.base8 })
 	set_hl("StatusLineNC", { bg = config.ui.transparent_background and "NONE" or palette.bg_alt, fg = palette.base6 })
